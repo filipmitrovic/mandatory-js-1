@@ -1,3 +1,10 @@
+// länka css i head
+
+let linkCSS = document.createElement('link');
+linkCSS.rel = 'stylesheet';
+linkCSS.href = 'main.css';
+document.head.appendChild(linkCSS);
+
 // 1 h1 byt bananas till Vegetables
 
 let Vegetables = document.querySelector('h1');
@@ -21,9 +28,13 @@ a.textContent = 'Vegetables';
 a.setAttribute('href', "#vegetables");
 li.appendChild(a);
 
-// 3 lägg till h1 About och p flytta "We're the best in fruits & vegetables" obs ligger längs ner
+// 3 lägg till h2 About och p flytta "We're the best in fruits & vegetables" obs ligger längs ner
 
 let about = document.querySelector('#about');
+about.innerHTML = "";
+let pAbout = document.createElement('p');
+pAbout.textContent = "We're the best in fruits & vegetables";
+about.appendChild(pAbout);
 let h2 = document.createElement('h2');
 h2.textContent = 'About';
 about.appendChild(h2);
